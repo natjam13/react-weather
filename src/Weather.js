@@ -41,13 +41,7 @@ export default function Weather(props) {
   if (weatherData.ready) {
     return (
       <div className="Weather">
-        <a
-          href="https://www.shecodes.io/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="/images/logo.png" className="logo" alt="SheCodes Logo" />
-        </a>
+        <h1> Weather Forecast</h1>
         <form onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-9 ">
@@ -67,6 +61,7 @@ export default function Weather(props) {
             </div>
           </div>
         </form>
+        <i class="fa-solid fa-location-dot"></i>
         <WeatherInfo data={weatherData} />
         <WeatherForecast
           coordinates={weatherData.coordinates}
